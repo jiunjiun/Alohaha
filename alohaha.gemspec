@@ -4,12 +4,12 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 require 'alohaha/version'
 
 Gem::Specification.new do |spec|
-  spec.name          = "alohaha"
+  spec.name          = "Alohaha"
   spec.version       = Alohaha::VERSION
   spec.authors       = ["jiunjiun"]
   spec.email         = ["quietmes@gmail.com"]
-  spec.summary       = %q{TODO: Write a short summary. Required.}
-  spec.description   = %q{TODO: Write a longer description. Optional.}
+  spec.summary       = %q{Alohaha}
+  spec.description   = %q{This API helper get Taoyuan airport flight info}
   spec.homepage      = ""
   spec.license       = "MIT"
 
