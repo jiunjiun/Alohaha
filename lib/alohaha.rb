@@ -1,22 +1,21 @@
 require 'open-uri'
 require 'iconv'
-require 'activerecord'
+require 'virtus'
 
 require "alohaha/settings"
+require "alohaha/flight"
 require "alohaha/flight_parse"
 
 class Alohaha
   include FlightParse
 
   def initialize(option = {})
-    @airlines = []
-
     source_url(option[:source_url])
-    parse_flight
+    flights_parse
   end
 
-  def airlines
-    @airlines
+  def flights
+    @flights
   end
 end
 
