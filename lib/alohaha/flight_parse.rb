@@ -2,9 +2,11 @@ require 'open-uri'
 require 'iconv'
 
 module FlightParse
-    attr_accessor :url, :airlines
+  attr_accessor :url, :airlines
 
-
+  def source_url(url = nil)
+    @url = url.nil? ? FLIGHT_TXT_URL : url
+  end
 
   def parse_flight
     ic = Iconv.new('UTF-8', 'BIG5')
