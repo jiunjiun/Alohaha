@@ -17,5 +17,13 @@ class Alohaha
   def flights
     @flights
   end
+
+  def arrivals
+    @flights.select {|flights| flights.kind == 'Arrivals' }
+  end
+
+  def departure
+    @flights.select {|flights| flights.kind == 'Departure' }
+  end
 end
 
