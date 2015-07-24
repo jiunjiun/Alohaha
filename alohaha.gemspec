@@ -1,11 +1,11 @@
 # coding: utf-8
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'alohaha/version'
+require "alohaha/settings"
 
 Gem::Specification.new do |spec|
   spec.name          = "Alohaha"
-  spec.version       = Alohaha::VERSION
+  spec.version       = Settings::VERSION
   spec.authors       = ["jiunjiun"]
   spec.email         = ["quietmes@gmail.com"]
   spec.summary       = %q{Alohaha}
