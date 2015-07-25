@@ -1,4 +1,4 @@
-Alohaha
+#Alohaha
 
 This API helper get Taoyuan airport flight info
 
@@ -79,7 +79,7 @@ p haha.departure
 
 #Contributing
 
-1. Fork it ( https://github.com/[my-github-username]/alohaha/fork )
+1. Fork it ( https://github.com/jiunjiun/alohaha/fork )
 2. Create your feature branch (`git checkout -b my-new-feature`)
 3. Commit your changes (`git commit -am 'Add some feature'`)
 4. Push to the branch (`git push origin my-new-feature`)
