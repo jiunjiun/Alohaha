@@ -57,10 +57,10 @@ class FlightHaha
     self.gate = raw_data[5]
 
     # datetime
-    self.datetime = "#{raw_data[6]} #{raw_data[7]}"
+    self.datetime = "#{raw_data[6]} #{raw_data[7]} +08:00"
 
     # expected_datetime
-    self.expected_datetime = "#{raw_data[8]} #{raw_data[9]}"
+    self.expected_datetime = "#{raw_data[8]} #{raw_data[9]} +08:00"
 
     # destination
     self.destination = DestinationHaha.new(iata: raw_data[10], en: raw_data[11], zh: raw_data[12])
