@@ -63,7 +63,7 @@ class FlightHaha
     self.expected_datetime = "#{raw_data[8]} #{raw_data[9]}"
 
     # destination
-    self.destination = Destination.new(iata: raw_data[10], en: raw_data[11], zh: raw_data[12])
+    self.destination = DestinationHaha.new(iata: raw_data[10], en: raw_data[11], zh: raw_data[12])
 
     # flight_status
     self.flight_status = raw_data[13]
@@ -72,7 +72,7 @@ class FlightHaha
     self.aircraft_type = raw_data[14]
 
     # other_route
-    self.other_route = Destination.new(iata: raw_data[15], en: raw_data[16], zh: raw_data[17])
+    self.other_route = DestinationHaha.new(iata: raw_data[15], en: raw_data[16], zh: raw_data[17])
 
     # baggage_carousel
     self.baggage_carousel = raw_data[18]
