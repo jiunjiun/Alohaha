@@ -11,7 +11,7 @@ module FlightParse
     ic = Iconv.new('UTF-8', 'BIG5')
     row_data = ic.iconv(open(@url).read)
     row_data.each_line do |line|
-      @flights << Flight.new(line.split(',').map {|al| al = al.strip})
+      @flights << FlightHaha.new(line.split(',').map {|al| al = al.strip})
     end
   end
 end

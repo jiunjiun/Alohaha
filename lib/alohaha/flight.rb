@@ -1,4 +1,4 @@
-class Destination
+class DestinationHaha
   include Virtus.model
 
   attribute :iata,  String
@@ -6,7 +6,7 @@ class Destination
   attribute :zh,    String
 end
 
-class Flight
+class FlightHaha
   include Virtus.model
 
   attribute :terminal,          String    #1: T1, 2:T2
@@ -19,11 +19,11 @@ class Flight
   attribute :datetime,          DateTime
   attribute :expected_datetime, DateTime
 
-  attribute :destination,       Destination
+  attribute :destination,       DestinationHaha
   attribute :flight_status,     String
 
   attribute :aircraft_type,     String
-  attribute :other_route,       Destination
+  attribute :other_route,       DestinationHaha
   attribute :baggage_carousel,  String
   attribute :check_in_counter,  String
 
