@@ -42,4 +42,3 @@ class Alohaha
     @flights.select {|flights| flights.datetime > datetime }
   end
 end
-
