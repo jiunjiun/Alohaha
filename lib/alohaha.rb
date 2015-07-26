@@ -5,6 +5,7 @@ require 'virtus'
 require "alohaha/settings"
 require "alohaha/flight"
 require "alohaha/flight_parse"
+require 'alohaha/flight_helper'
 
 class Alohaha
   include FlightParse
