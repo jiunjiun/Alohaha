@@ -27,15 +27,15 @@ class Alohaha
   end
 
   def yesterday
-    @flights.select {|flights| flights.datetime > Date.today.prev_day && flights.datetime < Date.today }
+    @flights.select {|flights| flights.datetime.to_time > Date.today.prev_day.to_time && flights.datetime.to_time < Date.today.to_time }
   end
 
   def today
-    @flights.select {|flights| flights.datetime > Date.today && flights.datetime < Date.today.next_day }
+    @flights.select {|flights| flights.datetime.to_time > Date.today.to_time && flights.datetime.to_time < Date.today.next_day.to_time }
   end
 
   def tomorrow
-    @flights.select {|flights| flights.datetime > Date.today.next_day }
+    @flights.select {|flights| flights.datetime.to_time > Date.today.next_day.to_time }
   end
 
   def by_datetime(datetime = DateTime.now)
