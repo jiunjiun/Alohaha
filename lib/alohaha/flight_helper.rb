@@ -1,8 +1,12 @@
-class Array
-  def filter_kind(flights)
+module Flight_helper
+  def filter_kind
     {
-      Arrivals: flights.select {|flights| flights.kind == 'Arrivals'},
-      Departure: flights.select {|flights| flights.kind == 'Departure'}
+      Arrivals: self.select {|flights| flights.kind == 'Arrivals'},
+      Departure: self.select {|flights| flights.kind == 'Departure'}
     }
   end
+end
+
+class Array
+  include Flight_helper
 end
