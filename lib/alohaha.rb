@@ -1,8 +1,9 @@
-require 'open-uri'
+require 'curb'
 require 'iconv'
 require 'virtus'
 
 require "alohaha/settings"
+require "alohaha/flight_helper"
 require "alohaha/flight"
 require "alohaha/flight_parse"
 
@@ -19,26 +20,26 @@ class Alohaha
   end
 
   def arrivals
-    @flights.select {|flights| flights.kind == 'Arrivals' }
+    @flights.arrivals
   end
 
   def departure
-    @flights.select {|flights| flights.kind == 'Departure' }
+    @flights.departure
   end
 
   def yesterday
-    @flights.select {|flights| flights.datetime.to_time > Date.today.prev_day.to_time && flights.datetime.to_time < Date.today.to_time }
+    @flights.yesterday
   end
 
   def today
-    @flights.select {|flights| flights.datetime.to_time > Date.today.to_time && flights.datetime.to_time < Date.today.next_day.to_time }
+    @flights.today
   end
 
   def tomorrow
-    @flights.select {|flights| flights.datetime.to_time > Date.today.next_day.to_time }
+    @flights.tomorrow
   end
 
   def by_datetime(datetime = DateTime.now)
-    @flights.select {|flights| flights.datetime > datetime }
+    @flights.by_datetime(datetime)
   end
 end
