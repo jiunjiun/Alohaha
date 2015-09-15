@@ -1,6 +1,6 @@
 #Alohaha
 
-This API helper get Taoyuan airport flight info
+This API helper get Taoyuan International Airport flight info
 
 #Installation
 
