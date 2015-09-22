@@ -8,15 +8,15 @@ class Array
   end
 
   def yesterday
-    self.select {|flights| flights.datetime.to_time > Date.today.prev_day.to_time && flights.datetime.to_time < Date.today.to_time }
+    self.select {|flights| flights.datetime.to_time >= Date.today.prev_day.to_time && flights.datetime.to_time <= Date.today.to_time }
   end
 
   def today
-    self.select {|flights| flights.datetime.to_time > Date.today.to_time && flights.datetime.to_time < Date.today.next_day.to_time }
+    self.select {|flights| flights.datetime.to_time >= Date.today.to_time && flights.datetime.to_time <= Date.today.next_day.to_time }
   end
 
   def tomorrow
-    self.select {|flights| flights.datetime.to_time > Date.today.next_day.to_time }
+    self.select {|flights| flights.datetime.to_time >= Date.today.next_day.to_time }
   end
 
   def by_datetime(datetime = DateTime.now)
